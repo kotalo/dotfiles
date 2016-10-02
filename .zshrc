@@ -84,13 +84,4 @@ alias srcit='source ~/.zshrc'
 alias zshrc='vim ~/.zshrc'
 alias rm='rm'
 
-
-# Network config
-
-export http_proxy=http://http.proxy.fmr.com:8000
-export https_proxy=$http_proxy
-export git_proxy=$http_proxy
-export no_proxy=localhost
-
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

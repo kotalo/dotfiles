@@ -1,4 +1,8 @@
 # .bashrc
+# Launch zsh
+if [ -t 1 ]; then
+  exec zsh
+fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
