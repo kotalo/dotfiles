@@ -42,6 +42,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'maralla/completor.vim'
@@ -173,6 +175,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
+let g:indent_guides_auto_colors=1
 colorscheme jellybeans
 set background=dark
 
