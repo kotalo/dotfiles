@@ -37,9 +37,14 @@ Plugin 'tmux-plugins/vim-tmux'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'godlygeek/tabular'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'maralla/completor.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -94,6 +99,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 augroup nerdtree
   :autocmd!
   :autocmd vimenter * NERDTree
+  :autocmd vimenter * wincmd p
 augroup end
 
 augroup nerdtreeclose
@@ -167,11 +173,8 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert
+colorscheme jellybeans
 set background=dark
-
-" toggle background color
-call togglebg#map("<F5>")
 
 " Set the color for column 80
 highlight ColorColumn ctermbg=red
@@ -199,6 +202,12 @@ set ffs=unix,dos,mac
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
+
+" Set *.mb files to MarkDown instead of Modula-2
+augroup markdown
+  autocmd!
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+augroup end
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -305,21 +314,6 @@ set viminfo^=%
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
-
-" Format the status line
-set statusline=%f
-set statusline+=\ -\ 
-set statusline+=FileType:\ 
-set statusline+=%y
-set statusline+=%=
-set statusline+=Column:\ 
-set statusline+=%c\ \ 
-set statusline+=Buffer:\ 
-set statusline+=%n\ \ 
-set statusline+=%P\ 
-set statusline+=%l
-set statusline+=/
-set statusline+=%L
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

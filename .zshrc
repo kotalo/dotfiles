@@ -23,7 +23,7 @@ ZSH_THEME="jreese"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -45,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python wd common-aliases safe-paste rand-quote)
+plugins=(git python wd common-aliases safe-paste rand-quote history tmux)
 
 # User configuration
 
@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias lla='ls -lAh'
+alias lla='ls -lah'
 alias srcit='source ~/.zshrc'
 alias zshrc='vim ~/.zshrc'
 alias rm='rm'
