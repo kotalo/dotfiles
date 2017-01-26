@@ -23,8 +23,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Start Vundle 
-" {{{
+" => Start Vundle {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
@@ -53,8 +52,7 @@ filetype plugin indent on
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General 
-" {{{
+" => General {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Make ; act like :
@@ -94,8 +92,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface 
-" {{{
+" => VIM user interface {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Start NERDTree on startup
 augroup nerdtree
@@ -169,8 +166,7 @@ set tm=500
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts 
-" {{{
+" => Colors and Fonts {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
@@ -199,8 +195,7 @@ set ffs=unix,dos,mac
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo 
-" {{{
+" => Files, backups and undo {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -214,8 +209,7 @@ augroup end
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related 
-" {{{
+" => Text, tab and indent related {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
@@ -237,8 +231,7 @@ set wrap "Wrap lines
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Visual mode related 
-" {{{
+" => Visual mode related {{{
 """"""""""""""""""""""""""""""
 " Surround selection with "
 vnoremap <leader>" <esc>a"<esc>'<i"<esc>
@@ -256,8 +249,7 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers 
-" {{{
+" => Moving around, tabs, windows and buffers {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
 noremap j gj
@@ -312,16 +304,14 @@ set viminfo^=%
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Status line 
-" {{{
+" => Status line {{{
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings 
-" {{{
+" => Editing mappings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Movement mappings
 onoremap p i(
@@ -365,8 +355,7 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vimgrep searching and cope displaying 
-" {{{
+" => vimgrep searching and code displaying {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " When you press gv you vimgrep after the selected text
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
@@ -398,8 +387,7 @@ map <leader>p :cp<cr>
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking 
-" {{{
+" => Spell checking {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
@@ -412,8 +400,7 @@ map <leader>s? z=
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Misc 
-" {{{
+" => Misc {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
@@ -427,8 +414,7 @@ map <leader>pp :setlocal paste!<cr>
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions 
-" {{{
+" => Helper functions {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
